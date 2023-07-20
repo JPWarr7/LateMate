@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Sofia">
+<style>
+  .top{
+    position: relative;
+    top: 0%;
+    background-color: #34cceb;
+}
+body {
+    margin: 0;
+    background-color: #aac8e9ad;
+}
+
+.topnav {
+    overflow: hidden;
+    background-color: #34cceb;
+    display: flex;
+    justify-content: space-between;
+}
+
+.topnav a {
+    float: left;
+    color: #f2f2f2;
+    text-align: center;
+    padding: 28px 30px;
+    text-decoration: none;
+    font-size: 14px;
+}
+
+.topnav .a2:hover {
+    background-color: #dce0e0a9;
+    color: rgb(196, 180, 180);
+}
+
+.topnav a.active {
+    background-color: #adadadd3;
+    color: white;
+}
+
+.right-links {
+    display: flex;
+    justify-content: flex;
+    align-items: center;
+}
+
+.font1{
+    font-family: "Sofia", sans-serif;
+    text-shadow: 0 0 3px #806e6e, 0 0 5px #9e9ebb;
+    color: white;
+    margin-left: 20px;
+    font-size: 20px;
+}
+
+.h1{
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    margin-top: auto;
+}
+
+.img-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    margin-top: 350px;
+}
+
+img {
+    width: 75px;
+    height: 75px;
+    display: block;
+    margin: auto;
+}
+
+.img-container img {
+    margin: 10px;
+}
+
+@media screen and (max-width: 768px) {
+  .topnav a {
+    padding: 16px;
+    font-size: 12px;
+  }
+  .font1 {
+    margin-left: 10px;
+  }
+  .img-container {
+    margin-top: 40px;
+  }
+}
+</style>
+</head>
+<body>
+
+
+        <div class="topnav">
+                <p class="font1" href="#home">LateMate!</p>
+                <div class="right-links">
+                        <a class="a2" href="{{ url_for('signup') }}" onclick="activateLink(this)">Sign up</a>
+                        <a class="a2" href="{{ url_for('signin') }}" onclick="activateLink(this)">Sign in</a>
+                </div>
+        </div>
+<div class="container">
+  <div class="img-container">
+    <img src="https://www.svgrepo.com/show/510788/add-to-queue.svg" alt="">
+    <img src="https://www.svgrepo.com/show/510781/add-minus-square.svg" alt="">
+    <img src="https://www.svgrepo.com/show/510849/book.svg" alt="">
+  </div>
+  
+  <h1 class="h1">Late Add/Drop Courses</h1>
+
+</div>
+
+
+<script>
+function activateLink(link) {
+  // Remove the "active" class from all links
+  var links = document.querySelectorAll(".topnav a");
+  for (var i = 0; i < links.length; i++) {
+    links[i].classList.remove("active");
+  }
+
+  // Add the "active" class to the clicked link
+  link.classList.add("active");
+}
+</script>
+</body>
+</html

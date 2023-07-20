@@ -1,0 +1,176 @@
+body{
+  background-color: #34cceb;
+}
+h1{
+  left: 10px;
+  margin-bottom:20px;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.container{
+width: 100%;
+height: 100%;
+display: flex;
+justify-content: center;
+align-items: center;
+}
+/* Card styling */
+.card {
+  position: relative;
+  background-color: rgba(245, 245, 245, 0.87);
+  border-radius: 10px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.541);
+  top: 160px;
+  /* left: 35%; */
+  max-width: 420px;
+  padding: 25px;
+  height: 350px;
+  font-size: medium;
+
+}
+
+.change-labels{
+font-size: 13px;
+padding-bottom: 10px;
+}
+.signupCard {
+position: relative;
+  background-color: rgba(245, 245, 245, 0.87);
+  border-radius: 10px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.325);
+  margin: 130px auto;
+  width: 420px;
+  padding: 20px;
+  height: 610px;
+  left: 0px;
+
+
+}
+
+.first_name{
+  margin-top: 10px;
+  margin-left: 0px;
+  width: 200px;
+  padding-bottom: 10px;
+  font-size: small;
+}
+
+.last_name{
+margin-top: -88px;
+margin-left: 195px;
+width: 210px;
+padding-bottom: 10px;
+font-size: small;
+}
+
+.student_id{
+margin-top: 0;
+margin-left: 0px;
+width: 430px;
+padding-bottom: 10px;
+font-size: small;
+}
+.email{
+margin-top: 0;
+margin-left: 0px;
+width: 430px;
+padding-bottom: 10px;
+font-size: small;
+}
+.password{
+margin-top: 0;
+margin-left: 0px;
+width: 430px;
+padding-bottom: 10px;
+font-size: small;
+}
+.passwordRetype{
+margin-top: 0;
+margin-left: 0px;
+width: 430px;
+padding-bottom: 10px;
+font-size: small;
+}
+.changePassCard {
+align-items: center;
+  background-color: rgba(245, 245, 245, 0.87);
+  border-radius: 10px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.541);
+  margin: 130px auto;
+  max-width: 420px;
+  padding: 25px;
+  max-height: 1000px;
+  height: 440px;
+}
+.changePassCard h1{
+  text-align: center;
+}
+
+/* Form styling */
+form {
+  display: flex;
+  flex-direction: column;
+}
+
+label {
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+input {
+  border: 1px solid #918e8ebb;
+  background-color: #ffffff;
+  border-radius: 3px;
+  font-size: 16px;
+  padding: 10px; /* increase padding to add more space */
+  margin-bottom: 5px; /* increase margin to add more space */
+  width:90%;
+}
+
+
+
+#submit-button[type="submit"] {
+  background-color: #34cceb;
+  border: 1px solid #3333334f;
+  border-radius: 5px;
+  color: white;
+  cursor: pointer;
+  width:50%;
+  margin-top: 10px;
+  margin-left: 100px;
+
+}
+
+#signIn-btn[type="submit"] {
+
+background-color: #34cceb;
+border: 1px solid #3333334f;
+border-radius: 5px;
+color: white;
+cursor: pointer;
+margin-top: 10px;
+margin-left: 0px;
+width: 100%;
+
+
+}
+
+#signIn-btn[type="submit"]:hover {
+background-color: #ffffff;
+color: #34cceb;
+border-color: #34cceb;
+border-style:solid;
+
+}
+a{
+text-align: center;
+margin: 37%;
+}
+
+
+#submit-button[type="submit"]:hover {
+  background-color: #ffffff;
+  color: #34cceb;
+  border-color: #34cceb;
+
+}

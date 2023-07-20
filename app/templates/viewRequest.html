@@ -1,0 +1,23 @@
+{% extends "approver.html" %}
+
+{% block view %}
+<h1 class="hTitle"> Requests:</h1>
+{% for first_name, last_name, student_id, timestamp, type, subject, course, section, crn, comment, request_id, status in requests %}
+
+<div class="cards">
+  <div class="addcard-body">
+  
+    <h5 class="addcard-title">{{type}} Request</h5>
+    <p class="addcard-text">Student: {{first_name}} {{last_name}}</p>
+    <p class="addcard-text">ID: {{student_id}} </p>
+    <p class="addcard-text">Course: {{subject}} {{course}}-{{section}}</p>
+    <p class="addcard-text">Comments: {{comment}}</p>
+    <form action="{{ url_for('requestDetails', request_id=request_id) }}" method="post">
+      {{ form.csrf_token }}
+    <button class="addcard-button" type="submit" value="Request #{{ request.id }}">View</button>
+  </form>
+</div>
+
+</div>
+{% endfor %}
+  {% endblock %}

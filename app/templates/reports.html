@@ -1,0 +1,21 @@
+{% extends 'admin.html' %}
+{% block reports %}
+
+
+
+
+    <div class="main">
+      <div id='add-text'>
+        {{ form.gen.label(id ='filter-title', class_='filter-title') }}
+        {{ form.gen(id ='filter-select', class_='filter-select') }}
+        {{ form.GenInput.label(id='input-title',class_='input-title') }}
+        {{ form.GenInput(id ='filter-input', class_='form-control', size=32) }}
+        {{ form.submit(class_='filter-btn') }}
+      </div>
+    
+
+
+    </div>
+
+
+{% endblock %}

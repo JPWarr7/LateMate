@@ -1,0 +1,46 @@
+{% extends 'admin.html' %}
+{% block templates %}
+
+
+<div class="drop-card">
+      <h1 id='add-title'> Edit Approver:</h1>
+      <form action="{{ url_for('lateadd') }}" method="post">
+          {{ form.csrf_token }}
+			
+          <div id='add-text'>
+              {{ form.action.label(class_='add-text') }}
+              {{ form.action(id='input-req', class_='form-email') }}
+          </div>
+
+          <div id='add-text'>
+              {{ form.name.label(class_='add-text') }}
+              {{ form.name(id='input-req', class_='form-term') }}
+          </div>
+         
+          <div id='add-text'>
+              {{ form.approver_id.label(class_='add-text') }}
+              {{ form.approver_id(id='input-req', class_='form-std', size=32) }}
+          </div>
+  
+          <div id='add-text'>
+              {{ form.email.label(class_='add-text') }}
+              {{ form.email(id='input-req', class_='form-email', size=32) }}
+          </div>
+  
+  
+          <div id='commnet-title'>
+              {{ form.comments.label( class_='add-text') }}
+              {{ form.comments(id="commnets", class_='form-coments', size=32) }}
+          </div>
+  
+  
+          <div >
+              {{ form.submit(id='submit-late-btn', class_='add-req-btn') }}
+          </div>
+      </form>
+     
+</div>
+
+
+{% endblock %}
+

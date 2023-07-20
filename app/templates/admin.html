@@ -1,0 +1,19 @@
+{% extends 'base.html' %}
+
+{% block approver %}
+        <div class="p1">
+            <p>Faculty ||  Admin</p>
+        </div>
+        <div id="sidebar" class="sidebar">
+            <a href="{{ url_for('adminHome') }}" id="about" class="active" onclick="activateLink(this)">Home <i class="fa-solid fa-house"></i></a>
+            <a href="{{ url_for('templates' )}}" id="blog" onclick="activateLink(this)"> <span class="req">Approvers</span> <i class="fa-solid fa-diagram-successor"></i></a>
+             <a href="{{ url_for('reports') }}" id="projects" onclick="activateLink(this)">Reports <i class="fa-solid fa-chart-simple"></i></a>
+            </div>
+
+            {% block home %}{% endblock %}
+            {% block reports %}{% endblock %}
+            {% block templates%}{% endblock %}
+            {% block view  %}{% endblock %}
+
+
+{% endblock %}

@@ -1,0 +1,34 @@
+{% extends "approver.html" %}
+
+{% block view %}
+{% for first_name, last_name, student_id, timestamp, type, subject, course, section, crn, term, comment, request_id, status in request %}
+  <div class="req-card">
+    <h5 class="reqs-title">Request Type: {{ type }}</h5>
+    <p class="reqs-text"><strong>Student: </strong>{{first_name}} {{last_name}}</p>
+    <p class="reqs-text"><strong>ID:</strong> {{student_id}} </p>
+    <p class="reqs-text">Course: {{subject}} {{course}}-{{section}}</p>
+    <p class="reqs-text"><strong>Date:</strong> {{timestamp}}</p>
+    <p class="reqs-text"><strong>Term:</strong> {{term }}</p>
+    <p class="reqs-text"><strong>Student ID:</strong> {{student_id }}</p>
+    <p class="reqs-text"><strong>Status:</strong> {{status }}</p>
+    <p class="reqs-text"><strong>Comments:</strong> {{comment }}</p>
+    <!-- <p class="reqs-text"><strong>Status:</strong> {{status }}</p> -->
+          <form action="{{ url_for('updateRequest', request_id=request_id) }}" method="post">
+            {{ form.csrf_token }}
+
+            <div class="commnet">
+              {{ form.comments.label( class_='add-text') }}
+              {{ form.comments(id="commnets", class_='form-comments', size=32) }}
+            </div>
+            <div >
+              {{ form.approve( class_='reqs-approve') }}
+            </div>
+            <div >
+              {{ form.deny( class_='reqs-deny') }}
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+{% endfor %}
+{% endblock %}

@@ -1,0 +1,36 @@
+{% extends "student.html" %}
+
+{% block track %}
+
+  <h1 class="hTitle"> My Requests:</h1>
+
+  
+    {% for date, timestamp, type, subject, course, section, crn, status, comment in requests %}
+      <div class="student-cards">
+          <!-- <div class="track-card-2"> -->
+
+              <div class="addcard-body">
+
+                <h5 class="addcard-title">Request Type: {{type}} </h5>
+
+                <p class="addcard-text1">Request Date: {{timestamp}} </p>
+
+                <p class="addcard-text1">Request Type: {{type}} </p>
+
+                <p class="addcard-text1">Course: {{subject}} {{course}}-{{section}}</p>
+
+                <p class="addcard-text1">CRN: {{crn}}</p>
+
+                <p class="addcard-text1">Status: {{status}}</p>
+
+                <p class="addcard-text1">Comments: {{comment}}</p>
+
+              </div>
+
+          <!-- </div> -->
+  
+        </div>
+    {% endfor %}
+
+
+  {% endblock %}

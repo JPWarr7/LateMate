@@ -1,0 +1,25 @@
+{% extends 'admin.html' %}
+{% block home %}
+    <div class="container">
+    <div class="main">
+      <h1 class="htitle">Recent Request:</h1>
+        <div class="card">
+          <div class="addcard">
+            <div class="addcard-body">
+              <h5 class="addcard-title">Type: Late add request.</h5>
+              <p class="addcard-text">Student Name: John Smith</p>
+              <p class="addcard-text">Course: Math 101</p>
+              <p class="addcard-text">Reason: Need to fulfill major requirements</p>
+              <a class="addcard-button" href="{{ url_for('viewRequest') }}">View</a>
+
+            </div>
+            
+          </div>
+
+
+
+    </div>
+
+  </div>
+
+{% endblock %}

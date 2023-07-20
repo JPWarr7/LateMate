@@ -1,0 +1,49 @@
+{% extends "index.html" %}
+
+{% block content %}
+<div class="signupCard">
+    <h1>Sign Up</h1>
+    <form action="" method="post" novalidate>
+        {{ form.csrf_token }}
+        <div class="first_name">
+            {{ form.first_name.label(class_='form-label') }}
+            {{ form.first_name(class_='form-contral', size=32) }}
+        </div>
+        <div class="last_name">
+            {{ form.last_name.label(class_='form-label') }}
+            {{ form.last_name(class_='form-last', size=32) }}
+        </div >
+        <div class="student_id">
+            {{ form.student_id.label(class_='form-label') }}
+            {{ form.student_id(class_='form-id', size=32) }}
+        </div>
+        <div class="email">
+            {{ form.email.label(class_='form-label') }}
+            <br>
+            {{ form.email(class_='form-email', size=32) }}
+        </div>
+        <div class="password">
+            {{ form.password.label(class_='form-label') }}
+            {{ form.password(class_='form-pass', size=32) }}
+        </div>
+        <div class="passwordRetype">
+            {{ form.passwordRetype.label(class_='form-label') }}
+            {{ form.passwordRetype(class_='form-pass-retype', size=32) }}
+        </div>
+        <div class="signup_btn">
+            {{ form.submit(id='submit-button', class_='btn btn-primary') }}
+        </div>
+    </form>
+    {% if form.errors %}
+    <div class="alert alert-danger" role="alert">
+        <ul>
+            {% for field, errors in form.errors.items() %}
+                {% for error in errors %}
+                    <li>{{ field.label }} - {{ error }}</li>
+                {% endfor %}
+            {% endfor %}
+        </ul>
+    </div>
+    {% endif %}
+</div>
+{% endblock %}

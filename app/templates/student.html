@@ -1,0 +1,39 @@
+{% extends "base.html" %}
+
+{% block student %}
+        
+        <div class="p1">
+            <p>Student || {{ current_user.first_name }} {{ current_user.last_name }}</p>
+        </div>
+
+
+        <div id="sidebar" class="sidebar">
+            <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">×</a>
+            <a href="{{ url_for('studentHome') }}" id="about" class="active" onclick="activateLink(this)">Home <i class="fa-solid fa-house"></i></a>
+            <a href="{{ url_for('lateadd') }}" id="blog" onclick="activateLink(this)">Add <i class="fa-solid fa-plus"></i></a>
+            <a href="{{ url_for('latedrop') }}" id="projects" onclick="activateLink(this)">Drop <i class="fa-solid fa-xmark"></i></a>
+            <a href="{{ url_for('trackRequest') }}" id="contact" onclick="activateLink(this)">Track <i class="fa-solid fa-magnifying-glass fa-rotate-90"></i></a>
+          </div>
+
+
+
+
+    
+
+
+
+            <div class="container">
+                {% block home %}{% endblock %}
+                {% block drop  %}{% endblock %}
+                {% block add %} {% endblock %}
+                {% block track  %}{% endblock %}
+            </div>
+          	
+          
+
+
+
+        
+        
+
+{% endblock %}

@@ -1,0 +1,16 @@
+{% extends 'base.html' %}
+
+{% block approver %}
+        <div class="p1">
+            <p>Faculty ||  {{ current_user.first_name }} {{ current_user.last_name }}</p>
+        </div>
+        <div id="sidebar" class="sidebar">
+            <a href="{{ url_for('approverHome') }}" id="about" class="active" onclick="activateLink(this)">Home <i class="fa-solid fa-house"></i></a>
+            <a href="{{ url_for('viewRequest') }}" id="blog" onclick="activateLink(this)"> <span class="req">Requests</span> <i class="fa-solid fa-list-check"></i></a>
+            </div>
+        </div class="container">
+            {% block home %}{% endblock %}
+            {% block req %}{% endblock %}
+            {% block view  %}{% endblock %}
+    </div>
+{% endblock %}

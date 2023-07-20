@@ -1,0 +1,52 @@
+{% extends "student.html" %}
+
+{% block drop  %}
+<div class="drop-card">
+      <h1 id='add-title'>Drop Request:</h1>
+      <form action="{{ url_for('latedrop') }}" method="post">
+          {{ form.csrf_token }} 
+          <div id='add-text'>
+              {{ form.date.label(class_='add-text') }}
+              {{ form.date(id='input-req', class_='form-date', size=32) }}
+          </div>
+  
+          <div id='add-text'>
+              {{ form.term.label(class_='add-text') }}
+              {{ form.term(id='input-req', class_='form-term') }}
+          </div>
+         
+          <div id='add-text'>
+              {{ form.student_id.label(class_='add-text') }}
+              {{ form.student_id(id='input-req', class_='form-std', size=32) }}
+          </div>
+  
+          <div id='add-text'>
+              {{ form.email.label(class_='add-text') }}
+              {{ form.email(id='input-req', class_='form-email', size=32) }}
+          </div>
+  
+          <div id='add-text'>
+              {{ form.course_id.label(class_='add-text') }}
+              {{ form.course_id(id='input-req', class_='form-cid', size=32) }}
+          </div>
+  
+          <div id='commnet-title'>
+              {{ form.comments.label( class_='add-text') }}
+              {{ form.comments(id="commnets", class_='form-coments', size=32) }}
+          </div>
+  
+  
+          <div >
+              {{ form.submit(id='submit-btn', class_='req-btn') }}
+          </div>
+      </form>
+      {% with messages = get_flashed_messages(with_categories=true) %}
+        {% if messages %}
+          {% for category, message in messages %}
+            <div class="flash">{{ message }}</div>
+            {% endfor %}
+        {% endif %}
+      {% endwith %}
+  </div>
+</div>
+{% endblock %}

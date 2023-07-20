@@ -1,0 +1,28 @@
+{% extends 'approver.html' %}
+{% block req %}
+
+
+
+    <div class="main">
+      <div id='add-text'>
+        {{ form.filt.label(id ='filter-title', class_='filter-title') }}
+        {{ form.filt(id ='filter-select', class_='filter-select') }}
+        {{ form.submit(class_='filter-btn') }}
+      </div>
+    
+      <div class="card">
+        <div class="cards">
+          
+          <div class="addcard-body">
+            <h5 class="addcard-title">Type: Late add request.</h5>
+            <p class="addcard-text">Student Name: John Smith</p>
+            <p class="addcard-text">Course: Math 101</p>
+            <p class="addcard-text">Reason: Need to fulfill major requirements</p>
+            <a class="addcard-button" href="{{ url_for('viewRequest', request_id=request.id) }}">View</a>
+      
+          </div>
+
+
+    </div>
+
+{% endblock %}

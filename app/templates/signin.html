@@ -1,0 +1,23 @@
+{% extends "index.html" %}
+
+{% block content %}
+<div class="container">
+<div class="card">
+    <h1>Sign In</h1>
+    <form action="" method="post" novalidate>
+        {{ form.hidden_tag() }}
+        <div >
+            {{ form.email.label(class_='form-label') }}
+            {{ form.email(class_='form-control', size=32) }}
+        </div>
+        <div >
+            {{ form.password.label(class_='form-label') }}
+            {{ form.password(class_='form-control', size=32) }}
+        </div>
+        <div>
+            {{ form.submit(id='signIn-btn', class_='btn btn-primary') }}
+        </div>
+    </form>
+</div>
+</div>
+{% endblock %}

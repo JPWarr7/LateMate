@@ -1,0 +1,38 @@
+{% extends 'approver.html' %}
+{% block home %}
+
+<div class="bio-card1">
+  <h1>Bio Information:</h1> 
+  <br>
+  <table>
+
+      <tr>
+        <td class="tdl">Name:</td>
+        <td class="tdr">{{ current_user.first_name }} {{ current_user.last_name }}</td>
+
+      </tr>
+      <tr>
+        <td class="tdl">Email:</td>
+        <td class="tdr">{{ current_user.email }}</td>
+
+      </tr>
+      <tr>
+        <td class="tdl">Role:</td>
+        <td class="tdr">{{ current_user.role }}</td>
+
+      </tr>
+      <tr>
+        <td class="tdl">Staff ID:</td>
+        <td class="tdr">{{ current_user.student_id }}</td>
+
+      </tr>
+    </table>
+
+
+</div>
+
+
+
+
+
+{% endblock %}
