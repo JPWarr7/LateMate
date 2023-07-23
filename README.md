@@ -20,3 +20,5 @@ folder_path = "/home/CHANGE_THIS_PART/ctrl-alt-elite-dev/FALL-2023-CSC-schedule.
 ## 4. Launch the Application
 
 Finally, type `flask run` in the terminal to launch the application.
+
+## Note: images from the Live-Demo can be viewed within the "images" folder
