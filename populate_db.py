@@ -33,7 +33,7 @@ def populate_db():
 
 
     # change folder_path according to your virtual machine    
-    folder_path = "/home/jonathanwarren2022/ctrl-alt-elite-dev/FALL-2023-CSC-schedule.csv"
+    folder_path = "/home/FALL-2023-CSC-schedule.csv"
 
     # reading dataset
     courseFile = pd.read_csv(folder_path)
